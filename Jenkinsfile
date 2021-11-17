@@ -14,6 +14,9 @@ node {
         app = docker.build("susantoleman/cicd")
     }
 
+    stage ('Image scan') {
+          fortiCWPScanner imageName: cicd:latest, block: true
+    }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * Just an example */
