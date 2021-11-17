@@ -11,11 +11,11 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("susantoleman/imagetest")
+        app = docker.build("imagetest")
     }
 
     stage ('Image scan') {
-          fortiCWPScanner imageName: "imagetest:latest", block: true
+          fortiCWPScanner block: true, imageName: 'imagetest:latest'
     }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
