@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("susanto.leman/cicd")
+        app = docker.build("susantoleman/cicd")
     }
 
     stage('Test image') {
