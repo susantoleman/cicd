@@ -15,7 +15,7 @@ node {
     }
 
     stage ('Image scan') {
-          fortiCWPScanner imageName: 'imagetest:latest', block: true
+          fortiCWPScanner imageName: 'imagetest', block: true
     }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
