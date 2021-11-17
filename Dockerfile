@@ -1,2 +1,2 @@
-FROM dvwa:latest
+FROM vulnerables/web-dvwa
 
